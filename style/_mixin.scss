@@ -1,0 +1,41 @@
+/*mixins*/
+@mixin box-shadow($params) {
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin FlexRowSA() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: space-around;
+}
+
+@mixin bg_degrade($colorA, $colorB) {
+  background: -moz-linear-gradient(left, $colorA, $colorB);
+  background: -webkit-linear-gradient(left, $colorA, $colorB);
+  background: -ms-linear-gradient(left, $colorA, $colorB);
+  background: -o-linear-gradient(left, $colorA, $colorB);
+  background: linear-gradient(left, $colorA, $colorB);
+}
