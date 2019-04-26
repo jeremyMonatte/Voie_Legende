@@ -2,23 +2,122 @@
 @import "mixin";
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 
-  //  --CONTAINER-- \\
+//  --CONTAINER-- \\
 ::-webkit-scrollbar {
-    width: 12px;
-    z-index:232454;
-   /* position:absolute;
-    top:800px;*/
+  width: 12px;
+  z-index: 232454;
 }
-  //  --FOND--  \\
+//  --FOND--  \\
 ::-webkit-scrollbar-track {
-    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
+  //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
 }
-  //  --BARRE-- \\
+//  --BARRE-- \\
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #000000ab;
-    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  border-radius: 10px;
+  background-color: #000000ab;
+  //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+// -- Notre-Dame\\
+.paris {
+  font-size: 1em;
+  z-index: 2222;
+  position: fixed;
+  width: 3em;
+  height: 3em;
+  @include box-shadow(0.5em 0.5em 3em inset #00000099);
+  box-shadow :0.5em 0.5em 1em inset #0000002d, -0.5em 0.5em 1em inset #0000002d, -0.5em -0.5em 1em inset #0000002d, 0.5em -0.5em 1em inset #0000002d, 0em 0.5em 1em inset #0000002d, 0em -0.5em 1em inset #0000002d, -0.5em 0em 1em inset #0000002d, 0.5em 0em 1em inset #0000002d;
+  top: 1em;
+  right: 1em;
+  border-radius: 50%;
+  .notreDame {
+    transition: 0.6s;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.25em;
+    height: 1.2em;
+    .murG,
+    .murD {
+      width: 0.2em;
+      background-color: #fff;
+      height: 100%;
+      position: absolute;
+    }
+    .murG {
+      bottom: 0;
+      left: 0;
+      transition: 0.3s;
+      transition-delay: 0s;
+    }
+    .murD {
+      bottom: 0;
+      right: 0;
+      transition: 0.3s;
+      transition-delay: 0.3s;
+    }
+    .toit {
+      border-radius: 5em;
+      width: 1.5em;
+      height: 0.2em;
+      background-color: transparent;
+      position: absolute;
+      right: -0.125em;
+      top: 0;
+      transition: 0.3s;
+      transition-delay: 0.05s;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        height: 0.2em;
+        background-color: #fff;
+        width: 1.15em;
+        bottom: -2px;
+        transition: transform 0.3s, opacity 0.9s;
+        transition-delay: 0.2s;
+      }
+      &::after {
+        left: 0;
+        transform: rotateZ(-45deg);
+        transform-origin: 0% 50%;
+      }
+      &::before {
+        right: 0;
+        transform: rotateZ(45deg);
+        transform-origin: 100% 50%;
+      }
+    }
+  }
+  &:hover {
+    .notreDame {
+      top: 50%;
+      .murG {
+        height: 0;
+      }
+      .toit {
+        transform-origin: 100% 50%;
+        transform: rotateZ(-45deg);
+        right: 0.1em;
+        top: -0.05em;
+        &::after {
+          transform: rotateZ(0deg);
+        }
+        &::before {
+          transform: rotateZ(0deg);
+        }
+      }
+      .murD {
+        height: 1.5em;
+        transform-origin: 50% 100%;
+        transform: rotateZ(-45deg);
+        right: -0.05em;
+        bottom: 0.05em;
+      }
+    }
+  }
 }
 
 * {

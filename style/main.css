@@ -1,5 +1,155 @@
 /*variables*/
 /*mixins*/
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+::-webkit-scrollbar {
+  width: 12px;
+  z-index: 232454;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #000000ab;
+}
+
+.paris {
+  font-size: 1em;
+  z-index: 2222;
+  position: fixed;
+  width: 3em;
+  height: 3em;
+  -webkit-box-shadow: 0.5em 0.5em 3em inset #00000099;
+  box-shadow: 0.5em 0.5em 3em inset #00000099;
+  -webkit-box-shadow: 0.5em 0.5em 1em inset #0000002d, -0.5em 0.5em 1em inset #0000002d, -0.5em -0.5em 1em inset #0000002d, 0.5em -0.5em 1em inset #0000002d, 0em 0.5em 1em inset #0000002d, 0em -0.5em 1em inset #0000002d, -0.5em 0em 1em inset #0000002d, 0.5em 0em 1em inset #0000002d;
+          box-shadow: 0.5em 0.5em 1em inset #0000002d, -0.5em 0.5em 1em inset #0000002d, -0.5em -0.5em 1em inset #0000002d, 0.5em -0.5em 1em inset #0000002d, 0em 0.5em 1em inset #0000002d, 0em -0.5em 1em inset #0000002d, -0.5em 0em 1em inset #0000002d, 0.5em 0em 1em inset #0000002d;
+  top: 1em;
+  right: 1em;
+  border-radius: 50%;
+}
+
+.paris .notreDame {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1.25em;
+  height: 1.2em;
+}
+
+.paris .notreDame .murG,
+.paris .notreDame .murD {
+  width: 0.2em;
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+}
+
+.paris .notreDame .murG {
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.paris .notreDame .murD {
+  bottom: 0;
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.paris .notreDame .toit {
+  border-radius: 5em;
+  width: 1.5em;
+  height: 0.2em;
+  background-color: transparent;
+  position: absolute;
+  right: -0.125em;
+  top: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+.paris .notreDame .toit::after, .paris .notreDame .toit::before {
+  content: "";
+  position: absolute;
+  height: 0.2em;
+  background-color: #fff;
+  width: 1.15em;
+  bottom: -2px;
+  -webkit-transition: opacity 0.9s, -webkit-transform 0.3s;
+  transition: opacity 0.9s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.9s;
+  transition: transform 0.3s, opacity 0.9s, -webkit-transform 0.3s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.paris .notreDame .toit::after {
+  left: 0;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.paris .notreDame .toit::before {
+  right: 0;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+}
+
+.paris:hover .notreDame {
+  top: 50%;
+}
+
+.paris:hover .notreDame .murG {
+  height: 0;
+}
+
+.paris:hover .notreDame .toit {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+  right: 0.1em;
+  top: -0.05em;
+}
+
+.paris:hover .notreDame .toit::after {
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+}
+
+.paris:hover .notreDame .toit::before {
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+}
+
+.paris:hover .notreDame .murD {
+  height: 1.5em;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+  right: -0.05em;
+  bottom: 0.05em;
+}
+
 * {
   padding: 0;
   margin: 0;
