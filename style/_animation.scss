@@ -1,0 +1,171 @@
+@keyframes apear {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes apearFlex {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes grow {
+  from {
+    height: 100%;
+    width: 100%;
+  }
+  to {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+@keyframes piece1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  4% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  24% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes piece2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  24% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  44% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes piece3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  44% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  64% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes piece4 {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  64% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  84% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes adaptabilite {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pupilleQuiBouge {
+  0% {
+    transform: translate(0%, 0);
+  }
+  10% {
+    transform: translate(-25%, 0);
+  }
+  30% {
+    transform: translate(-25%, 0);
+  }
+  40% {
+    transform: translate(25%, 0);
+  }
+  60% {
+    transform: translate(25%, 0);
+  }
+  80% {
+    transform: translate(0, -12%);
+  }
+  100% {
+    transform: translate(0%, 0);
+  }
+}
+@keyframes irisQuiBouge {
+  0% {
+    transform: translate(0%, 0);
+  }
+  10% {
+    transform: translate(-20%, 0);
+  }
+  30% {
+    transform: translate(-20%, 0);
+  }
+  40% {
+    transform: translate(20%, 0);
+  }
+  60% {
+    transform: translate(20%, 0);
+  }
+  80% {
+    transform: translate(0%, -7%);
+  }
+  100% {
+    transform: translate(0%, 0);
+  }
+}

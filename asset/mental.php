@@ -23,10 +23,10 @@
 
 	<path id="cheminG" class="st4" d="M16.6,79.6c2.4,2.3,22.6,21.3,32.2,15.8c8.7-5,7.7-29.7-2.5-46.5C38.5,36.1,26.8,27.3,29,21.7 c2.1-5.5,17.2-4.6,20.3-11.7c1-2.1,1-4.4,0.7-7.2" style="fill:none;"/>
 
-	<path id="cheminC" class="st4" d="M50,95.6L50,20" style="fill:none;"/>
+	<path id="cheminC" class="st4" d="M50,95.6L50,20L50,95" style="fill:none;"/>
 
 
-	<circle fill="#0c0f2b" class="Bmental" cx="" cy="" r="2">
+	<circle fill="#0c0f2b" class="Bmental" cx="1" cy="1" r="2">
 		<animateMotion begin="0s" dur="2s" repeatCount="indefinite">
 			<mpath xlink:href="#cheminD"/>
 		</animateMotion>
@@ -36,13 +36,13 @@
       <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
     </linearGradient>
 
-	<circle cx="" cy="" class="Bmental" r="3" fill="url(#grad1)">
-		<animateMotion begin="0.3s" dur="2s" repeatCount="indefinite">
+	<circle cx="1" cy="1" class="Bmental" r="3" fill="url(#grad1)">
+		<animateMotion begin="0.6s" dur="2s" repeatCount="indefinite">
 			<mpath xlink:href="#cheminC"/>
 		</animateMotion>
 	</circle>
 
-	<circle fill="#ffffff" class="Bmental" cx="" cy="" r="2">
+	<circle fill="#ffffff" class="Bmental" cx="1" cy="1" r="2">
 		<animateMotion begin="0s" dur="2s" repeatCount="indefinite">
 			<mpath xlink:href="#cheminG"/>
 		</animateMotion>

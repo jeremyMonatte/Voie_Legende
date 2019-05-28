@@ -1,67 +1,36 @@
 @import "variables";
 @import "mixin";
+@import "animation";
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:700,900");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400");
 
 //  -- CONTAINER -- \\
 ::-webkit-scrollbar {
   width: 12px;
-  z-index: 232454;
+  z-index: 999999999;
   background-color: $c-fond;
 }
 //  -- FOND --  \\
 ::-webkit-scrollbar-track {
-  //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   border-radius: 10px;
   background-color: $c-fond;
 }
 //  -- BARRE -- \\
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #000000ab;
-  //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  background-color: #00000055;
 }
 // -- Notre-Dame -- \\
 .paris {
-  transform: scale(0);
-  transition: 0s;
-  transition-delay: 0.2s;
+  border-bottom: 2px solid $c-texte;
   font-size: 1em;
   z-index: 554;
   position: fixed;
-  width: 3em;
+  width: 2.5em;
   height: 3em;
-  @include box-shadow(0.5em 0.5em 3em inset #00000099);
-  box-shadow: 0.5em 0.5em 1em inset #0000002d, -0.5em 0.5em 1em inset #0000002d,
-    -0.5em -0.5em 1em inset #0000002d, 0.5em -0.5em 1em inset #0000002d,
-    0em 0.5em 1em inset #0000002d, 0em -0.5em 1em inset #0000002d,
-    -0.5em 0em 1em inset #0000002d, 0.5em 0em 1em inset #0000002d;
   top: 1em;
-  right: 1em;
-  border-radius: 50%;
-  &.visible {
-    transition-delay: 1s;
-    transform: scale(1);
-    overflow: hidden;
-    &::after {
-      background-color: #00000099;
-      content: "";
-      transition: 0.2s;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      display: none;
-    }
-  }
-  &.brightLow {
-    &::after {
-      display: block;
-      opacity: 1;
-      animation: apear 0.3s linear 0s 1 normal forwards;
-    }
-  }
+  right: 1.5em;
+  display: block;
   .notreDame {
     transition: 0.6s;
     position: absolute;
@@ -73,7 +42,7 @@
     .murG,
     .murD {
       width: 0.2em;
-      background-color: #fff;
+      background-color: $c-texte;
       height: 100%;
       position: absolute;
     }
@@ -104,7 +73,7 @@
         content: "";
         position: absolute;
         height: 0.2em;
-        background-color: #fff;
+        background-color: $c-texte;
         width: 1.15em;
         bottom: -2px;
         transition: transform 0.3s, opacity 0.9s;
@@ -155,35 +124,25 @@
 }
 // -- MacDo -- \\
 .macdo {
-  display: none;
-  opacity: 0;
+  border-bottom: 2px solid $c-texte;
   transition: 0s;
   transition-delay: 0.1s;
   font-size: 1em;
   z-index: 554;
   position: fixed;
-  width: 3em;
+  width: 2.5em;
   height: 3em;
-  @include box-shadow(0.5em 0.5em 3em inset #00000099);
-  box-shadow: 0.5em 0.5em 1em inset #0000002d, -0.5em 0.5em 1em inset #0000002d,
-    -0.5em -0.5em 1em inset #0000002d, 0.5em -0.5em 1em inset #0000002d,
-    0em 0.5em 1em inset #0000002d, 0em -0.5em 1em inset #0000002d,
-    -0.5em 0em 1em inset #0000002d, 0.5em 0em 1em inset #0000002d;
   top: 1em;
   left: 1em;
-  border-radius: 50%;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
   align-items: space-around;
-  &.visible {
-    @include flex();
-    transition-delay: 0s;
-    transition: 0.6s;
-    opacity: 1;
-    transition-timing-function: ease-in;
-  }
+  @include flex();
+  transition-delay: 0s;
+  transition: 0.6s;
+  transition-timing-function: ease-in;
   .hamburger {
     position: relative;
     width: 1.4em;
@@ -191,7 +150,7 @@
     transition: 0.2s;
     .bar {
       height: 0.2em;
-      background-color: #fff;
+      background-color: $c-texte;
       position: absolute;
       transition: 0.2s;
       &:nth-of-type(1) {
@@ -322,7 +281,7 @@ h2 {
   left: -100vw;
   width: 100vw;
   height: 100vh;
-  background-color: #fff;
+  background-color: $c-texte;
 }
 main {
   @include FlexRowSA;
@@ -345,7 +304,7 @@ main {
     opacity: 1;
     animation: apear 0.3s linear 0s 1 normal forwards;
   }
-  color: #fff;
+  color: $c-texte;
 }
 .voieSelector {
   @include FlexRowSA;
@@ -411,25 +370,25 @@ main {
           top: 100%;
           left: 50%;
           transform-origin: 50% 0%;
-          transform: rotate3d(1, 0, 0, -85deg) translateX(-50%);
+          transform: rotate3d(1, 0, 0, 90deg) translateX(-50%);
         }
         &.backTop {
           bottom: 100%;
           left: 50%;
           transform-origin: 50% 100%;
-          transform: rotate3d(1, 0, 0, 85deg) translateX(-50%);
+          transform: rotate3d(1, 0, 0, -90deg) translateX(-50%);
         }
         &.backRight {
           top: 50%;
           left: 100%;
           transform-origin: 0% 50%;
-          transform: rotate3d(0, 1, 0, 85deg) translateY(-50%);
+          transform: rotate3d(0, 1, 0, -90deg) translateY(-50%);
         }
         &.backLeft {
           top: 50%;
           right: 100%;
           transform-origin: 100% 50%;
-          transform: rotate3d(0, 1, 0, -85deg) translateY(-50%);
+          transform: rotate3d(0, 1, 0, 90deg) translateY(-50%);
         }
       }
       .voieContent {
@@ -511,16 +470,16 @@ main {
   }
   &:hover {
     #g1 {
-      animation: adaptabilite 0.85s ease-in-out 0s infinite alternate;
+      animation: adaptabilite 0.95s ease-in-out 0s infinite alternate;
     }
     #g2 {
-      animation: adaptabilite 0.5s ease-in-out 0s infinite alternate;
+      animation: adaptabilite 0.6s ease-in-out 0s infinite alternate;
     }
     #d1 {
-      animation: adaptabilite 0.75s ease-in-out 0s infinite alternate;
+      animation: adaptabilite 0.85s ease-in-out 0s infinite alternate;
     }
     #d2 {
-      animation: adaptabilite 0.6s ease-in-out 0s infinite alternate;
+      animation: adaptabilite 0.7s ease-in-out 0s infinite alternate;
     }
   }
 }
@@ -543,61 +502,47 @@ main {
     animation: irisQuiBouge 2s linear 0s infinite normal;
   }
 }
-.voieContainer {
-  .voieItem {
-    display: none;
-    opacity: 0;
-    transition: 5.1s;
-    transition-delay: 1.1s;
+main.voieContainer {
+  @include flex;
+  padding: 2em;
+  .voieNav {
+    pointer-events: all;
+    background-color: $c-fond;
+    padding: 1em;
+    padding-top: 4.5rem;
+    width: 600px;
+    height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    z-index: 56;
-    background-color: $c-fond;
-  }
-  .voieItem.open {
-    animation: apearFlex 0.3s linear 1.4s 1 normal forwards;
-    @include flex;
-    .voieNav {
+    left: calc(-600px - 4em);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 550;
+    transition: 0.8s;
+    * {
       pointer-events: all;
-      background-color: $c-fond;
+    }
+    @include box-shadow(1em 0em 3em #000);
+    ul {
       padding: 1em;
-      padding-top: 4.5rem;
-      width: 600px;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: calc(-600px - 4em);
-      overflow-x: hidden;
-      overflow-y: scroll;
-      z-index: 550;
-      transition: 0.8s;
-      * {
-        pointer-events: all;
-      }
-      @include box-shadow(1em 0em 3em #000);
-      ul {
-        padding: 1em;
-        font-size: 2em;
-        li {
-          font-weight: 300;
-          list-style: none;
-          border: none;
-          border-bottom: solid 1px #fff;
-          line-height: 2;
-          transition: 0.2s;
-          &:first-of-type {
-            border-top: solid 1px #fff;
-          }
-          &:hover {
-            background-color: #ffffff10;
-            padding-left: 1em;
-          }
+      font-size: 2em;
+      li {
+        list-style: none;
+        a {
+          color: $c-texte;
+          text-decoration: none;
+        }
+        font-weight: 300;
+        border: none;
+        border-bottom: solid 1px $c-texte;
+        line-height: 2;
+        transition: 0.2s;
+        &:first-of-type {
+          border-top: solid 1px $c-texte;
+        }
+        &:hover {
+          background-color: rgba($color: $c-texte, $alpha: 0.1);
+          padding-left: 1em;
         }
       }
       &.open {
@@ -633,201 +578,5 @@ main {
         animation: apear 0.3s linear 0s 1 normal forwards;
       }
     }
-  }
-}
-@keyframes apear {
-  from {
-    display: none;
-    opacity: 0;
-  }
-  to {
-    display: block;
-    opacity: 1;
-  }
-}
-@keyframes apearFlex {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes grow {
-  from {
-    height: 100%;
-    width: 100%;
-  }
-  to {
-    height: 100vh;
-    width: 100vw;
-  }
-}
-
-@keyframes piece1 {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  4% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-  24% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes piece2 {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  20% {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  24% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-  44% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes piece3 {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  40% {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  44% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-  64% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes piece4 {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  60% {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  64% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-  84% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes adaptabilite {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes ballAnim {
-  0% {
-    transform: translate(0);
-  }
-  10% {
-    transform: translate(0);
-  }
-  30% {
-    transform: translate(0);
-  }
-  30% {
-    transform: translate(2px, 0);
-  }
-  50% {
-    transform: translate(2px, 0);
-  }
-  70% {
-    transform: translate(2px, 0);
-  }
-  70% {
-    transform: translate(-3px, -2px);
-  }
-  90% {
-    transform: translate(-3px, -2px);
-  }
-  100% {
-    transform: translate(-3px, -2px);
-  }
-}
-@keyframes pupilleQuiBouge {
-  0% {
-    transform: translate(0%, 0);
-  }
-  10% {
-    transform: translate(-25%, 0);
-  }
-  30% {
-    transform: translate(-25%, 0);
-  }
-  40% {
-    transform: translate(25%, 0);
-  }
-  60% {
-    transform: translate(25%, 0);
-  }
-  80% {
-    transform: translate(0, 12%);
-  }
-  100% {
-    transform: translate(0%, 0);
-  }
-}
-@keyframes irisQuiBouge {
-  0% {
-    transform: translate(0%, 0);
-  }
-  10% {
-    transform: translate(-20%, 0);
-  }
-  30% {
-    transform: translate(-20%, 0);
-  }
-  40% {
-    transform: translate(20%, 0);
-  }
-  60% {
-    transform: translate(20%, 0);
-  }
-  80% {
-    transform: translate(0%, 7%);
-  }
-  100% {
-    transform: translate(0%, 0);
   }
 }
