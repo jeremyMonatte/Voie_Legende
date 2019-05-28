@@ -3,28 +3,20 @@
 <main role-aria="main" class="notBackStyle">
   <h1>Rejoignez la <br /><strong>Voie des Légendes</strong></h1>
   <div class="voieSelector">
-    <div data-link="farming.php" class="voie">
+    <a href="farming.php" class="voie">
       <div data-id="1" class="thumbnail" id="farming">
         <div class="contentThumb">
           <?php include "asset/farming.php"?>
           <h3>Farming</h3>
         </div>
-        <div class="back3d backTop"></div>
-        <div class="back3d backBot"></div>
-        <div class="back3d backRight"></div>
-        <div class="back3d backLeft"></div>
       </div>
-    </div>
+    </a>
     <div class="voie">
       <div data-id="2" class="thumbnail" id="adapt">
         <div class="contentThumb">
           <?php include "asset/adaptabilite.php"?>
           <h3>Adaptabilité</h3>
         </div>
-        <div class="back3d backTop"></div>
-        <div class="back3d backBot"></div>
-        <div class="back3d backRight"></div>
-        <div class="back3d backLeft"></div>
       </div>
     </div>
     <div class="voie">
@@ -33,10 +25,6 @@
           <?php include "asset/mental.php"?>
           <h3>Mental</h3>
         </div>
-        <div class="back3d backTop"></div>
-        <div class="back3d backBot"></div>
-        <div class="back3d backRight"></div>
-        <div class="back3d backLeft"></div>
       </div>
     </div>
     <div class="voie">
@@ -45,10 +33,6 @@
           <?php include "asset/vision.php"?>
           <h3>Vision</h3>
         </div>
-        <div class="back3d backTop"></div>
-        <div class="back3d backBot"></div>
-        <div class="back3d backRight"></div>
-        <div class="back3d backLeft"></div>
       </div>
     </div>
 
@@ -58,10 +42,6 @@
           <?php include "asset/vision.php"?>
           <h3>Vision</h3>
         </div>
-        <div class="back3d backTop"></div>
-        <div class="back3d backBot"></div>
-        <div class="back3d backRight"></div>
-        <div class="back3d backLeft"></div>
       </div>
     </div>
 

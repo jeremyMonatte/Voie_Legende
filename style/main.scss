@@ -358,80 +358,12 @@ main {
           z-index: inherit;
         }
       }
-      .back3d {
-        position: absolute;
-        background-color: $c-fond;
-        transition: transform 0.5s;
-        transition-delay: 0.5s;
-        z-index: 12;
-        height: 100%;
-        width: 100%;
-        &.backBot {
-          top: 100%;
-          left: 50%;
-          transform-origin: 50% 0%;
-          transform: rotate3d(1, 0, 0, 90deg) translateX(-50%);
-        }
-        &.backTop {
-          bottom: 100%;
-          left: 50%;
-          transform-origin: 50% 100%;
-          transform: rotate3d(1, 0, 0, -90deg) translateX(-50%);
-        }
-        &.backRight {
-          top: 50%;
-          left: 100%;
-          transform-origin: 0% 50%;
-          transform: rotate3d(0, 1, 0, -90deg) translateY(-50%);
-        }
-        &.backLeft {
-          top: 50%;
-          right: 100%;
-          transform-origin: 100% 50%;
-          transform: rotate3d(0, 1, 0, 90deg) translateY(-50%);
-        }
-      }
-      .voieContent {
-        display: none;
-        opacity: 0;
-      }
       &:hover {
         &::before,
         &::after {
           width: 100%;
           height: 50%;
           transition: width 0.2s, height 0.6s;
-        }
-      }
-      &.open {
-        z-index: 15;
-        perspective: 100vw;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: 0.5s;
-        &::before,
-        &::after {
-          width: 100%;
-          height: 50%;
-          transition: width 0.2s, height 0.6s;
-        }
-        .backBot {
-          animation: grow 0.3s linear 1s 1 normal forwards;
-          transform: rotate3d(1, 0, 0, 0) translateX(-50%);
-        }
-        .backTop {
-          animation: grow 0.3s linear 1s 1 normal forwards;
-          transform: rotate3d(1, 0, 0, 0) translateX(-50%);
-        }
-        .backRight {
-          animation: grow 0.3s linear 1s 1 normal forwards;
-          transform: rotate3d(0, 1, 0, 0) translateY(-50%);
-        }
-        .backLeft {
-          animation: grow 0.3s linear 1s 1 normal forwards;
-          transform: rotate3d(0, 1, 0, 0) translateY(-50%);
         }
       }
     }

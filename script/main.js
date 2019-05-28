@@ -12,7 +12,6 @@ document.onload = init();
 var target;
 var idVoie;
 function init() {
-    $(".thumbnail").click(ChangeVoie);
     $(".paris").click(retourHome);
     $(".macdo").click(toggleNav);
     $('body a[href^="#"]').click(smoothscroll);
@@ -47,19 +46,7 @@ function retourHome() {
         }
     );
 }
-function ChangeVoie() {
-    target = this;
-    $(this).toggleClass("open");
-    idVoie = $(this).attr("data-id");
-    $("main").toggleClass("backStyle");
-    $("body, main").toggleClass("noscroll");
-}
 
-/*
-function checkFinAnim(){
-  if ($(".open .backLeft").h) {
-  }
-}*/
 
 function smoothscroll() {
     var hreff = $(this).attr("href");
